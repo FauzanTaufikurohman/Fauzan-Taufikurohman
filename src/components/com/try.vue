@@ -1,59 +1,18 @@
 <template>
   <section id="home" class="container mt-5 py-5 text-light">
-    <div
-      class="row align-items-center py-5 d-flex flex-md-row flex-column-reverse"
-    >
+    <div class="row align-items-center py-5 d-flex flex-md-row">
       <!-- Kolom Kiri: Deskripsi -->
       <div class="col-12 col-md-8 animate__animated animate__fadeInLeft">
-        <h1 class="text-white mb-3">FAUZAN TAUFIKUROHMAN</h1>
+        <h1 class="text-white text-start mb-3">FAUZAN TAUFIKUROHMAN</h1>
         <p class="lead">
           Active student of Information Technology Study Program at Brawijaya
           University with experience in Front End and Back End Development.
         </p>
-        <div
-          class="w-100 d-flex justify-content-center justify-content-md-start"
-        >
-          <a href="/public/CVFAUZAN.pdf" download class="btn btn-primary">
-            Download CV
-          </a>
-        </div>
-
-        <div class="row mt-2">
-          <!-- Keterampilan -->
-          <div class="col-6">
-            <h5 class="text-white mt-4">💻 Keterampilan:</h5>
-            <ul class="list-unstyled ms-2">
-              <li class="skill-item">• Web: Vue, React, Laravel</li>
-              <li class="skill-item">• Backend: Node.js, PHP</li>
-              <li class="skill-item">• IoT: ESP32, Arduino</li>
-              <li class="skill-item">• Database: MySQL, MongoDB</li>
-            </ul>
-          </div>
-
-          <!-- Temukan Saya -->
-          <div class="col-6">
-            <h5 class="text-white mt-4">🌐 Temukan Saya:</h5>
-            <div class="social-icons pt-2 ms-2 d-flex gap-2 flex-wrap">
-              <a href="https://github.com/FauzanTaufikurohman" target="_blank">
-                <i class="fab fa-github fa-lg"></i>
-              </a>
-              <a
-                href="https://www.linkedin.com/in/fauzantaufikurohman/"
-                target="_blank"
-              >
-                <i class="fab fa-linkedin fa-lg"></i>
-              </a>
-              <a href="https://www.instagram.com/_hellzan/" target="_blank">
-                <i class="fab fa-instagram fa-lg"></i>
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
 
       <!-- Kolom Kanan: Foto -->
       <div
-        class="col-12 col-md-3 text-center animate__animated animate__fadeInRight"
+        class="col-12 col-md-3 text-center mt-4 mt-md-0 animate__animated animate__fadeInRight"
       >
         <img
           src="../../assets/images/Zan.jpg"
@@ -130,6 +89,9 @@ h1 {
     width: 220px;
     margin-top: 2rem;
   }
+  .row.align-items-center {
+    flex-direction: column !important;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -137,68 +99,29 @@ h1 {
     width: 160px;
     margin-top: 1.5rem;
   }
+  .col-md-8,
+  .col-md-3 {
+    text-align: center !important;
+  }
 }
 
 @media (max-width: 575.98px) {
   .photo-animate {
     width: 120px;
+    margin-top: 1rem;
   }
   h1 {
     font-size: 1.5rem;
-    text-align: center;
   }
   .lead {
     font-size: 1rem;
-    text-align: center;
+    text-align: start;
   }
   .btn {
     font-size: 0.9rem;
     padding: 0.5rem 1rem;
   }
 }
-@media (max-width: 575.98px) {
-  .skill-item {
-    font-size: 0.8rem;
-  }
-
-  .social-icons i {
-    font-size: 1.2rem; /* lebih kecil dari fa-2x */
-  }
-
-  .social-icons a {
-    gap: 0.5rem;
-  }
-
-  h5 {
-    font-size: 1rem;
-  }
-}
-@media (max-width: 400px) {
-  .col-6 {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .skill-item,
-  .social-icons,
-  .social-icons a,
-  .social-icons i {
-    text-align: center !important;
-    justify-content: center !important;
-  }
-
-  .social-icons {
-    display: flex;
-    flex-wrap: wrap;
-  }
-   .col-6 h5 {
-    text-align: center;
-  }
-
-  .col-6 ul {
-    padding-left: 0 !important;
-  }
-}
-
 
 @keyframes fadeIn {
   to {

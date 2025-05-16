@@ -1,20 +1,20 @@
 <template>
-  <section id="tentang" class="container mt-5 py-5 text-light">
-    <div class="row align-items-center py-5">
+  <section id="tentang" class="container py-5 text-light">
+    <div class="row align-items-center py-5 flex-column flex-md-row">
       <div
-        class="col-md-4 text-start mt-4 mt-md-0 animate__animated animate__fadeInLeft"
+        class="col-12 col-md-5 text-center text-md-start mt-4 mt-md-0 animate__animated animate__fadeInLeft"
       >
         <img
           src="../../assets/images/Zan.jpg"
           alt="Foto HellZan"
-          class="rounded-circle shadow-lg photo-animate"
+          class="rounded-circle shadow-lg photo-animate img-fluid"
         />
       </div>
 
       <div
-        class="col-md-8 text-center text-md-start animate__animated animate__fadeInRight"
+        class="col-12 col-md-7 text-center text-md-start animate__animated animate__fadeInRight mt-4 mt-md-0"
       >
-        <h2 class="text-white mb-3">👨‍💻 Tentang Saya</h2>
+        <h2 class="text-white mb-3">Tentang Saya</h2>
         <p class="lead">
           Saya adalah seorang developer web dan IoT yang senang menjelajah
           teknologi terbaru. Saya terus belajar dan berkembang untuk menciptakan
@@ -26,22 +26,15 @@
           dunia nyata dengan solusi digital.
         </p>
 
-        <h5 class="text-white mt-4">🔧 Pengalaman</h5>
-        <ul class="list-unstyled">
-          <li class="experience-item">
-            • Membangun aplikasi web menggunakan Vue.js dan Laravel.
-          </li>
-          <li class="experience-item">
-            • Mengembangkan proyek IoT berbasis ESP32 dan Arduino.
-          </li>
-          <li class="experience-item">
-            • Berpengalaman dalam menggunakan database seperti MySQL dan
-            MongoDB.
-          </li>
+        <h5 class="text-white mt-4">Pengalaman</h5>
+        <ul class="list-unstyled d-flex flex-column justify-content-center">
+          <li class="experience-item">Pengembang web Vue.js & Laravel.</li>
+          <li class="experience-item">IoT: ESP32 & Arduino.</li>
+          <li class="experience-item">Database: MySQL & MongoDB</li>
         </ul>
 
-        <h5 class="text-white mt-4">🌟 Motto Saya</h5>
-        <p class="lead">
+        <h5 class="text-white mt-4">Motto Saya</h5>
+        <p class="fw-small">
           "Inovasi adalah kunci untuk membuka dunia baru penuh kemungkinan."
         </p>
       </div>
@@ -77,7 +70,7 @@ onMounted(() => {
 });
 </script>
 
-  <style scoped>
+<style scoped>
 body {
   background-color: #0a1f33;
   font-family: "Poppins", sans-serif;
@@ -100,11 +93,36 @@ h1 {
 .photo-animate {
   opacity: 0;
   width: 300px;
+  max-width: 80vw;
   border-radius: 50%;
   border: 4px solid transparent;
   background-origin: border-box;
   background-clip: content-box;
   animation: fadeIn 2s ease-in-out forwards, glowEffect 2s infinite alternate;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 992px) {
+  .photo-animate {
+    width: 200px;
+    max-width: 40vw;
+  }
+}
+/* Responsive image size */
+@media (max-width: 768px) {
+  .photo-animate {
+    width: 180px;
+    max-width: 60vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-animate {
+    width: 120px;
+    max-width: 80vw;
+  }
 }
 
 /* Animasi fadeIn untuk foto */
@@ -144,7 +162,6 @@ h1 {
     transform: translateY(-20px);
   }
 }
-
 
 .animate__animated {
   opacity: 0;
@@ -206,5 +223,36 @@ h1 {
     transform: translateX(0);
   }
 }
+
+/* Responsive text alignment and spacing */
+@media (max-width: 768px) {
+  .text-md-start {
+    text-align: center !important;
+  }
+  .mt-md-0 {
+    margin-top: 1rem !important;
+  }
+  .py-5 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h2,
+  h5 {
+    font-size: 1.2rem;
+  }
+  .lead {
+    font-size: 1rem;
+  }
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
 </style>
-  
